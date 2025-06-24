@@ -39,11 +39,11 @@
                     <mat-label>อีเมล</mat-label>
                     <input id="username" matInput [formControlName]="'username'" />
                     @if (signInForm.get('username').hasError('required')) {
-                        <mat-error> กรุณาระบบ อีเมล </mat-error>
+                        <mat-error> กรุณาระบุ อีเมล </mat-error>
                     }
                     @if (signInForm.get('username').hasError('email')) {
                         <mat-error>
-                            กรุณาระบบ อีเมล ให้ถูกต้อง
+                            กรุณาระบุ อีเมล ให้ถูกต้อง
                         </mat-error>
                     }
                 </mat-form-field>
@@ -153,10 +153,10 @@
             <div class="text-7xl font-bold leading-none text-gray-100">
                 <div>ยินดีต้อนรับสู่</div>
                 <div>ระบบบริหารจัดการ</div>
-                <div>[System Name]</div>
+                <div>ศูนย์ผู้ป่วยมะเร็ง</div>
             </div>
             <div class="mt-6 text-lg leading-6 tracking-tight text-gray-400">
-                แพลตฟอร์มของเราช่วยให้คุณสามารถ[System Objective] และเข้าถึงข้อมูลที่สำคัญของบริษัทได้อย่างสะดวกและปลอดภัย
+                แพลตฟอร์มของเราช่วยให้คุณสามารถบริหารจัดการศูนย์ผู้ป่วยมะเร็ง และเข้าถึงข้อมูลที่สำคัญของบริษัทได้อย่างสะดวกและปลอดภัย
             </div>
         </div>
     </div>

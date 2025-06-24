@@ -36,6 +36,33 @@ export const horizontalNavigation: FuseNavigationItem[] = [
         icon : 'heroicons_outline:chart-pie',
         link : '/dashboards'
     },
+    // {
+    //     id: 'customer',
+    //     title: 'ลูกค้า',
+    //     type: 'basic',
+    //     icon: 'heroicons_outline:user-group',
+    //     link: '/persons',
+       
+    // },
+
+    {
+        id: 'patience',
+        title: 'ข้อมูลผู้ป่วย',
+        type: 'basic',
+        icon: 'heroicons_outline:user-group',
+        link: '/patiences',
+       
+    },
+
+    {
+        id: 'note',
+        title: 'ประวัติผู้ป่วย',
+        type: 'basic',
+        icon: 'heroicons_outline:clipboard-document-list',
+        link: '/notes',
+       
+    },
+    
     {
         id: 'report',
         title: 'รายงาน',

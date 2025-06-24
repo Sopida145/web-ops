@@ -10,14 +10,14 @@ import { LayoutComponent } from 'app/layout/layout.component';
 export const appRoutes: Route[] = [
 
     // Redirect empty path to '/dashboards'
-    {path: '', pathMatch : 'full', redirectTo: 'dashboards'},
+    { path: '', pathMatch: 'full', redirectTo: 'dashboards' },
 
     // Redirect signed-in user to the '/example'
     //
     // After the user signs in, the sign-in page will redirect the user to the 'signed-in-redirect'
     // path. Below is another redirection for that path to redirect the user to the desired
     // location. This is a small convenience to keep all main routes together here on this file.
-    {path: 'signed-in-redirect', pathMatch : 'full', redirectTo: 'dashboards'},
+    { path: 'signed-in-redirect', pathMatch: 'full', redirectTo: 'dashboards' },
 
     // Auth routes for guests
     {
@@ -29,11 +29,11 @@ export const appRoutes: Route[] = [
             layout: 'empty'
         },
         children: [
-            {path: 'confirmation-required', loadChildren: () => import('app/modules/auth/confirmation-required/confirmation-required.routes')},
-            {path: 'forgot-password', loadChildren: () => import('app/modules/auth/forgot-password/forgot-password.routes')},
-            {path: 'reset-password', loadChildren: () => import('app/modules/auth/reset-password/reset-password.routes')},
-            {path: 'sign-in', loadChildren: () => import('app/modules/auth/sign-in/sign-in.routes')},
-            {path: 'sign-up', loadChildren: () => import('app/modules/auth/sign-up/sign-up.routes')}
+            { path: 'confirmation-required', loadChildren: () => import('app/modules/auth/confirmation-required/confirmation-required.routes') },
+            { path: 'forgot-password', loadChildren: () => import('app/modules/auth/forgot-password/forgot-password.routes') },
+            { path: 'reset-password', loadChildren: () => import('app/modules/auth/reset-password/reset-password.routes') },
+            { path: 'sign-in', loadChildren: () => import('app/modules/auth/sign-in/sign-in.routes') },
+            { path: 'sign-up', loadChildren: () => import('app/modules/auth/sign-up/sign-up.routes') }
         ]
     },
 
@@ -47,8 +47,8 @@ export const appRoutes: Route[] = [
             layout: 'empty'
         },
         children: [
-            {path: 'sign-out', loadChildren: () => import('app/modules/auth/sign-out/sign-out.routes')},
-            {path: 'unlock-session', loadChildren: () => import('app/modules/auth/unlock-session/unlock-session.routes')}
+            { path: 'sign-out', loadChildren: () => import('app/modules/auth/sign-out/sign-out.routes') },
+            { path: 'unlock-session', loadChildren: () => import('app/modules/auth/unlock-session/unlock-session.routes') }
         ]
     },
 
@@ -60,7 +60,7 @@ export const appRoutes: Route[] = [
             layout: 'empty'
         },
         children: [
-            {path: 'home', loadChildren: () => import('app/modules/landing/home/home.routes')},
+            { path: 'home', loadChildren: () => import('app/modules/landing/home/home.routes') },
         ]
     },
 
@@ -78,10 +78,25 @@ export const appRoutes: Route[] = [
             initialData: initialDataResolver
         },
         children: [
-            {path: 'dashboards', loadChildren: () => import('app/modules/admin/dashboards/dashboards.routes')},
-            {path: 'report', loadChildren: () => import('app/modules/admin/example/example.routes')},
-            {path: 'companies', loadChildren: () => import('app/modules/admin/companies/companies.routes')},
-            {path: 'users', loadChildren: () => import('app/modules/admin/user/user.routes')},
+            { path: 'dashboards', loadChildren: () => import('app/modules/admin/dashboards/dashboards.routes') },
+            {
+                path: 'notes',
+                loadChildren: () =>
+                    import('app/modules/admin/notes/note.routes'),
+                
+            },
+            { path: 'dashboards', loadChildren: () => import('app/modules/admin/dashboards/dashboards.routes') },
+            {
+                path: 'patiences',
+                loadChildren: () =>
+                    import('app/modules/admin/patiences/patience.routes'),
+               
+                
+            },
+            { path: 'report', loadChildren: () => import('app/modules/admin/example/example.routes') },
+            { path: 'companies', loadChildren: () => import('app/modules/admin/companies/companies.routes') },
+            { path: 'users', loadChildren: () => import('app/modules/admin/user/user.routes') },
+            {path: 'dashboards',loadChildren: () =>import('app/modules/admin/dashboards/dashboards.routes')}
         ]
     }
 ];

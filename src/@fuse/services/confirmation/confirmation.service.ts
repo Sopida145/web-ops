@@ -49,7 +49,7 @@ export class FuseConfirmationService {
     }
 
     alertSuccess(
-        title: string = 'สำเร็จ',
+        title: string = '',
         message: string = 'บันทึกข้อมูลสำเร็จ',
         icon: string = "check_circle_outline"
     ): void {
