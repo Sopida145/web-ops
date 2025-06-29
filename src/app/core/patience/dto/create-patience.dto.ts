@@ -7,5 +7,6 @@ export interface CreatePatienceDto {
     phone: string;
     Address: string;
     id: string; 
+    gender: string;
     
 }

@@ -11,6 +11,7 @@ export interface UpdatePatienceDto extends CreatePatienceDto {
     phone: string;
     Address: string;
     id: string; 
+    gender: string;
     
     
     

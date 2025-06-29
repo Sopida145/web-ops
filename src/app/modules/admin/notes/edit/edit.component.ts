@@ -95,6 +95,8 @@ export class EditNoteComponent implements OnInit {
                 a: [note?.a || '', [Validators.required]],
                 p: [note?.p || '', [Validators.required]],
                 
+                
+                
             }
         );
     }
@@ -129,12 +131,13 @@ export class EditNoteComponent implements OnInit {
                     this._fuseConfirmationService.alertSuccess();
                 },
                 error: (err) => {
+                    console.error('❌ Create note error:', err);  // เพิ่ม log ดู error
                     this.disableSave = false;
                     this.cdr.detectChanges();
+                    this._fuseConfirmationService.alertError('Failed to create note'); // แจ้งผู้ใช้
                 },
             });
     }
-
     update(id: string, body: UpdateNoteDto): void {
         this._noteService
             .update(id, body)

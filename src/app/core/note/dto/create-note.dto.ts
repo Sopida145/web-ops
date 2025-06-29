@@ -6,4 +6,5 @@ export interface CreateNoteDto {
     o: string;
     a: string;
     p: string;
+    visitDate: string;
 }

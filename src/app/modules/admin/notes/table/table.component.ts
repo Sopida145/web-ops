@@ -53,6 +53,7 @@ export class TableNoteComponent implements OnChanges {
         'o',
         'a',
         'p',
+        
         'edit',
     ];
     dataSource: Note[] = [];

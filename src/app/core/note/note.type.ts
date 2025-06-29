@@ -8,4 +8,5 @@ export interface Note
     o: string;
     a: string;
     p: string;
+    visitDate: string;
 }

@@ -97,7 +97,10 @@ export class EditPatienceComponent implements OnInit {
                 idCard: [patience?.idCard || '', [Validators.required]],
                 phone: [patience?.phone || '', [Validators.required]],
                 Address: [patience?.Address || '', [Validators.required]],
+                gender : [patience?. gender || '', [Validators.required]],
+           
                 // id: [patience?.id || '', [Validators.required]], // เพิ่ม id ที่นี่
+
 
                 
 

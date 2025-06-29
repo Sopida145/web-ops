@@ -51,6 +51,7 @@ export class TablePatienceComponent implements OnChanges {
         // 'id',
         'firstName',
         'lastName',
+        'gender',
         'dob',
         'idCard',
         'phone',

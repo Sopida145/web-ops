@@ -126,20 +126,23 @@ export class NoteListComponent {
                 .afterClosed()
                 .subscribe((result: boolean) => {
                     if (result) {
-                        this.deleteNote(note.hn);
+                        this.deleteNote(note.id);
                     }
                 });
         }
 
-    deleteNote(hn: string): void {
-        this._noteService
-            .delete(hn)
-            .pipe(takeUntil(this._unsubscribeAll), debounceTime(300))
-            .subscribe((res) => {
-                this.fetchData();
-                this._fuseConfirmationService.alertDelete();
-            });
-    }
+        deleteNote(id: string) {
+            this._noteService.delete(id)
+              .pipe(takeUntil(this._unsubscribeAll))
+              .subscribe({
+                next: () => {
+                  this.fetchData(); // โหลดข้อมูลใหม่
+                },
+                error: (err) => {
+                  console.error('❌ Error deleting note:', err); // ← สำคัญมาก!
+                }
+              });
+          }
 
     onChangePage(event: PageEvent): void {
         this.currPage.limit = event.pageSize;

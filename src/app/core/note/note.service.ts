@@ -58,6 +58,8 @@ export class NoteService {
         );
     }
 
+    
+
     create(body: CreateNoteDto): Observable<any> {
         return this._httpClient.post(this.apiUrl.noteUrl, body);
     }
@@ -69,4 +71,7 @@ export class NoteService {
     delete(hn: string): Observable<any> {
         return this._httpClient.delete(this.apiUrl.noteWithIdUrl(hn));
     }
+
+    
+  
 }

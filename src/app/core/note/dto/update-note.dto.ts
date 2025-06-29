@@ -9,4 +9,5 @@ export interface UpdateNoteDto extends CreateNoteDto {
     o: string;
     a: string;
     p: string;
+    visitDate: string;
 }

@@ -8,4 +8,5 @@ export interface Patience
     idCard: string;
     phone: string;
     Address: string;
+    gender: string;
 }

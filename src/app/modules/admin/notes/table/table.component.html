@@ -1,7 +1,7 @@
 @if(noteResp){
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="hn">
-    <th mat-header-cell *matHeaderCellDef> หมายเลขบัตรผู้ป่วย </th>
+    <th mat-header-cell *matHeaderCellDef> รหัสผู้ป่วย </th>
     <td mat-cell *matCellDef="let element"> {{element.hn}} </td>
   </ng-container>
 
@@ -29,6 +29,8 @@
     <th mat-header-cell *matHeaderCellDef> แผนการรักษา/ดูแล </th>
     <td mat-cell *matCellDef="let element"> {{element.p}} </td>
   </ng-container>
+
+  
 
   <ng-container matColumnDef="edit">
     <th mat-header-cell *matHeaderCellDef  class="w-[2rem]"></th>
