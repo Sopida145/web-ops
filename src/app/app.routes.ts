@@ -78,25 +78,30 @@ export const appRoutes: Route[] = [
             initialData: initialDataResolver
         },
         children: [
-            { path: 'dashboards', loadChildren: () => import('app/modules/admin/dashboards/dashboards.routes') },
+            {
+                path: 'dashboards',
+                loadChildren: () => import('app/modules/admin/dashboards/dashboards.routes')
+            },
             {
                 path: 'notes',
-                loadChildren: () =>
-                    import('app/modules/admin/notes/note.routes'),
-                
+                loadChildren: () => import('app/modules/admin/notes/note.routes')
             },
-            { path: 'dashboards', loadChildren: () => import('app/modules/admin/dashboards/dashboards.routes') },
             {
                 path: 'patiences',
-                loadChildren: () =>
-                    import('app/modules/admin/patiences/patience.routes'),
-               
-                
+                loadChildren: () => import('app/modules/admin/patiences/patience.routes')
             },
-            { path: 'report', loadChildren: () => import('app/modules/admin/example/example.routes') },
-            { path: 'companies', loadChildren: () => import('app/modules/admin/companies/companies.routes') },
-            { path: 'users', loadChildren: () => import('app/modules/admin/user/user.routes') },
-            {path: 'dashboards',loadChildren: () =>import('app/modules/admin/dashboards/dashboards.routes')}
+            {
+                path: 'report',
+                loadChildren: () => import('app/modules/admin/example/example.routes')
+            },
+            {
+                path: 'companies',
+                loadChildren: () => import('app/modules/admin/companies/companies.routes')
+            },
+            {
+                path: 'users',
+                loadChildren: () => import('app/modules/admin/user/user.routes')
+            }
         ]
     }
 ];

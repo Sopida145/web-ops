@@ -21,7 +21,7 @@ export const CanDeactivateUserEdit = (
     return true;
   }
 
-  if (nextRoute.paramMap.get('id')) {
+  if (nextRoute.paramMap.get('hn')) {
     return true;
   }
 

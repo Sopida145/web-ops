@@ -87,7 +87,14 @@ export class EditNoteComponent implements OnInit {
     initialForm(note?: Note): FormGroup {
         return this._formBuilder.group(
             {
-                name: [note?.name || '', [Validators.required]],
+                
+                hn: [note?.hn || '', [Validators.required]],
+                bloodPressure: [note?.bloodPressure || '', [Validators.required]],
+                s: [note?.s || '', [Validators.required]],
+                o: [note?.o || '', [Validators.required]],
+                a: [note?.a || '', [Validators.required]],
+                p: [note?.p || '', [Validators.required]],
+                
             }
         );
     }
@@ -95,7 +102,15 @@ export class EditNoteComponent implements OnInit {
 
     onSave(): void {
         this.disableSave = true;
-        const payload = this.initForm.getRawValue();
+        const formValue = this.initForm.getRawValue();
+
+
+        // ✅ แปลง hn เป็น string
+    const payload = {
+        ...formValue,
+        hn: formValue.hn?.toString() ?? ''  // ป้องกัน null ด้วย
+    };
+        
         if (this.isEdit) {
             this.update(this.noteId, payload);
         } else {

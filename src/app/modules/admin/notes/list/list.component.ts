@@ -114,7 +114,7 @@ export class NoteListComponent {
 
     onEdit(note: Note): void {
         console.log(note);
-        this.onOpenEdit(note.hn);
+        this.onOpenEdit(note.id);
     }
 
     
@@ -137,7 +137,7 @@ export class NoteListComponent {
             .pipe(takeUntil(this._unsubscribeAll), debounceTime(300))
             .subscribe((res) => {
                 this.fetchData();
-                this._fuseConfirmationService.alertSuccess();
+                this._fuseConfirmationService.alertDelete();
             });
     }
 

@@ -114,7 +114,7 @@ export class PatienceListComponent {
 
     onEdit(patience: Patience): void {
         console.log(patience);
-        this.onOpenEdit(patience.hn);
+        this.onOpenEdit(patience.id);
     }
 
     onDelete(patience: Patience): void {

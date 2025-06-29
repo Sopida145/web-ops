@@ -1,6 +1,6 @@
 export interface Patience
 {
-    // id: string;
+    id: string;
     hn: string;
     firstName: string;
     lastName: string;

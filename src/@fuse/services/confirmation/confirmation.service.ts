@@ -73,6 +73,36 @@ export class FuseConfirmationService {
         }
         this.open(config);
     }
+    
+
+    alertDelete(
+        title: string = 'ลบข้อมูล',
+        message: string = 'คุณต้องการลบข้อมูลนี้ใช่หรือไม่?',
+        icon: string = "delete_outline"
+    ): MatDialogRef<FuseConfirmationDialogComponent> {
+        const config: FuseConfirmationConfig = {
+            "title": title,
+            "message": message,
+            "icon": {
+                "show": true,
+                "name": icon,
+                "color": "warn"
+            },
+            "actions": {
+                "confirm": {
+                    "show": true,
+                    "label": 'ลบ',
+                    "color": 'warn',
+                },
+                "cancel": {
+                    "show": true,
+                    "label": 'ยกเลิก',
+                }
+            },
+            "dismissible": true
+        };
+        return this.open(config);
+    }
 
     alertError(
         title: string = 'ผิดพลาด',

@@ -1,4 +1,9 @@
 export interface CreateNoteDto {
-    name: string;
+   id: string;
     hn: string;
+    bloodPressure: string;
+    s: string;
+    o: string;
+    a: string;
+    p: string;
 }

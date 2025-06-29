@@ -2,7 +2,7 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
  <ng-container matColumnDef="hn">
-    <th mat-header-cell *matHeaderCellDef> หมายเลขบัตรผู้ป่วย </th>
+    <th mat-header-cell *matHeaderCellDef> รหัสผู้ป่วย </th>
     <td mat-cell *matCellDef="let element"> {{element.hn}} </td>
   </ng-container>
 
@@ -41,13 +41,13 @@
     <th mat-header-cell *matHeaderCellDef  class="w-[2rem]"></th>
     <td mat-cell *matCellDef="let element" > 
       <div class="flex justify-center">
-          <button mat-icon-button [matMenuTriggerFor]="menu" [name]="'action'+element.hn">
+          <button mat-icon-button [matMenuTriggerFor]="menu" [name]="'action'+element.id">
             <mat-icon>more_vert</mat-icon>
           </button>
       
         <mat-menu #menu="matMenu">
           
-          <button mat-menu-item (click)="edit.emit(element)" [name]="'edit_code_'+element.hn">
+          <button mat-menu-item (click)="edit.emit(element)" [name]="'edit_code_'+element.id">
             <mat-icon [svgIcon]="'edit'"></mat-icon>
             <span>เเก้ไข</span>
           </button>

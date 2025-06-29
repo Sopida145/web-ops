@@ -14,7 +14,7 @@ export class PatienceService {
 
     readonly apiUrl = {
         patienceUrl: this._basePatienceUrl,
-        patienceWithIdUrl: (hn: string): string => `${this._basePatienceUrl}/${hn}`
+        patienceWithIdUrl: (id: string): string => `${this._basePatienceUrl}/${id}`
     };
 
     private _httpClient = inject(HttpClient);
@@ -62,8 +62,8 @@ export class PatienceService {
         return this._httpClient.post(this.apiUrl.patienceUrl, body);
     }
 
-    update(hn: string, body: UpdatePatienceDto): Observable<any> {
-        return this._httpClient.put(this.apiUrl.patienceWithIdUrl(hn), body);
+    update(id: string, body: UpdatePatienceDto): Observable<any> {
+        return this._httpClient.put(this.apiUrl.patienceWithIdUrl(id), body);
     }
 
     delete(hn: string): Observable<any> {

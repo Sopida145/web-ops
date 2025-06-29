@@ -66,7 +66,7 @@ export class NoteService {
         return this._httpClient.put(this.apiUrl.noteWithIdUrl(id), body);
     }
 
-    delete(id: string): Observable<any> {
-        return this._httpClient.delete(this.apiUrl.noteWithIdUrl(id));
+    delete(hn: string): Observable<any> {
+        return this._httpClient.delete(this.apiUrl.noteWithIdUrl(hn));
     }
 }

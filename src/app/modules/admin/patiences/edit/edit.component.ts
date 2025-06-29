@@ -57,26 +57,12 @@ export class EditPatienceComponent implements OnInit {
     private _unsubscribeAll: Subject<any> = new Subject<any>();
     disableSave: boolean = false;
 
-    get firstName() {
-        return this.initForm.get('firstName');
+    get name() {
+        return this.initForm.get('name');
         
     }
 
-    get lastName() {
-        return this.initForm.get('lastName');
-        
-    }
-
-    get dob() {
-        return this.initForm.get('dob');
-        
-    }
-
-    // get idCard() {
-    //     return this.initForm.get('idCard');
-        
-    // }
-
+   
     constructor(
         private _formBuilder: FormBuilder,
         private _listPatienceComponent: PatienceListComponent,
@@ -86,7 +72,7 @@ export class EditPatienceComponent implements OnInit {
         private _fuseConfirmationService: FuseConfirmationService,
         private cdr: ChangeDetectorRef
     ) {
-        this.patienceId = this._route.snapshot.paramMap.get('hn');
+        this.patienceId = this._route.snapshot.paramMap.get('id');
         this.isEdit = !!this.patienceId;
     }
 
@@ -111,6 +97,7 @@ export class EditPatienceComponent implements OnInit {
                 idCard: [patience?.idCard || '', [Validators.required]],
                 phone: [patience?.phone || '', [Validators.required]],
                 Address: [patience?.Address || '', [Validators.required]],
+                // id: [patience?.id || '', [Validators.required]], // เพิ่ม id ที่นี่
 
                 
 

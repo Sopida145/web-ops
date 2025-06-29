@@ -48,7 +48,12 @@ export class TableNoteComponent implements OnChanges {
 
     displayedColumns: string[] = [
         'hn',
-        'edit'
+        'bloodPressure',
+        's',
+        'o',
+        'a',
+        'p',
+        'edit',
     ];
     dataSource: Note[] = [];
 

@@ -23,12 +23,46 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <mat-form-field class="w-full" subscriptSizing="dynamic">
-                            <mat-label>ชื่อ</mat-label>
-                            <input matInput [placeholder]="'ระบุชื่อ'" name="input_name"
-                                [formControlName]="'name'">
+                            <mat-label>หมายเลขบัตรผู้ป่วย</mat-label>
+                            <input matInput [placeholder]="'ระบุชื่อ'" name="HN"
+                                [formControlName]="'hn'">
                         </mat-form-field>
                     </div>
-                    
+                    <div>
+                        <mat-form-field class="w-full" subscriptSizing="dynamic">
+                            <mat-label>ความดันเลือด</mat-label>
+                            <input matInput [placeholder]="'ระบุความดันเลือด'" name="BloodPressure"
+                                [formControlName]="'bloodPressure'">
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field class="w-full" subscriptSizing="dynamic">
+                            <mat-label>ข้อมูลอาการ</mat-label>
+                            <input matInput [placeholder]="'ระบุข้อมูลอาการ'" name="S"
+                                [formControlName]="'s'">
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field class="w-full" subscriptSizing="dynamic">
+                            <mat-label>ข้อมูลการตรวจวัด</mat-label>
+                            <input matInput [placeholder]="'ระบุข้อมูลการตรวจวัด'" name="O"
+                                [formControlName]="'o'">
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field class="w-full" subscriptSizing="dynamic">
+                            <mat-label>วินิจฉัยเบื้องต้น</mat-label>
+                            <input matInput [placeholder]="'ระบุวินิจฉัยเบื้องต้น'" name="A"
+                                [formControlName]="'a'">
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field class="w-full" subscriptSizing="dynamic">
+                            <mat-label>แผนการรักษา/ดูแล</mat-label>
+                            <input matInput [placeholder]="'ระบุแผนการรักษา/ดูแล'" name="P"
+                                [formControlName]="'p'">
+                        </mat-form-field>
+                    </div>
                 </div>
             </div>
 

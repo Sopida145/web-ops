@@ -24,7 +24,7 @@
 
                     <div>
                         <mat-form-field class="w-full" subscriptSizing="dynamic">
-                            <mat-label>หมายเลขผู้ป่วย</mat-label>
+                            <mat-label>รหัสผู้ป่วย</mat-label>
                             <input matInput [placeholder]="'ระบุหมายเลขผู้ป่วย'" name="input_name"
                                 [formControlName]="'hn'">
                         </mat-form-field>
@@ -46,6 +46,9 @@
                         </mat-form-field>
                     </div>
 
+                    
+                            
+
                     <div>
                         <mat-form-field class="w-full" subscriptSizing="dynamic">
                             <mat-label>วันเกิด</mat-label>
@@ -60,7 +63,7 @@
                         <mat-form-field class="w-full" subscriptSizing="dynamic">
                             <mat-label>เลขบัตรประชาชน</mat-label>
                             <input matInput [placeholder]="'ระบุเลขบัตรประชาชน'" name="input_name"
-                                [formControlName]="'idCard'">
+                                [formControlName]="'idCard'" maxlength="13">
                         </mat-form-field>
                     </div>
 
@@ -68,7 +71,7 @@
                         <mat-form-field class="w-full" subscriptSizing="dynamic">
                             <mat-label>เบอร์โทรศัพท์</mat-label>
                             <input matInput [placeholder]="'ระบุเบอร์โทรศัพท์'" name="input_name"
-                                [formControlName]="'phone'">
+                                [formControlName]="'phone'" maxlength="10">
                         </mat-form-field>
                     </div>
 
