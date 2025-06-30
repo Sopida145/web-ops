@@ -17,7 +17,7 @@
         >
             <div class="flex flex-wrap gap-4 text-3xl">
                 <div class="flex flex-initial items-center">
-                    <div class="font-mono text-4xl font-semibold text-primary opacity-80">
+                    <div class="font-mono text-4xl font-semibold text-primary opacity-80 text-green-900">
                         สิทธิ์การใช้งาน
                     </div>
                 </div>
@@ -29,6 +29,7 @@
                             mat-flat-button
                             class="ml-4 w-auto rounded-lg"
                             [color]="'primary'"
+                            style="background-color: #15ac4c; color: white;"
                             (click)="onOpenCreate()" 
                             name="create"
                         >
@@ -43,7 +44,8 @@
                 <div class="flex flex-wrap items-end  gap-x-4">
                     @for (item of isActiveLists; track item) {
                         @if(getIsActive === item.value){
-                            <button mat-flat-button [color]="'primary'">{{item.displayName}}</button>
+                            <button mat-flat-button [color]="'primary'" style="background-color: #15ac4c; color: white;">{{item.displayName}}</button>
+                            
                         } 
     
                         @else{

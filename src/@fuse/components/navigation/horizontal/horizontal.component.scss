@@ -32,11 +32,12 @@ fuse-horizontal-navigation {
         }
 
         /* Basic - When item active (current link) */
+        /* ถ้าผู้ใช้เปิดหน้าหลักอยู่ เมนู “หน้าหลัก” จะถือว่า active */
         fuse-horizontal-navigation-basic-item {
             .fuse-horizontal-navigation-item-active,
             .fuse-horizontal-navigation-item-active-forced {
                 .fuse-horizontal-navigation-item-title {
-                    @apply text-primary #{'!important'};
+                    @apply text-green-900 #{'!important'};
                 }
 
                 .fuse-horizontal-navigation-item-subtitle {
@@ -48,7 +49,7 @@ fuse-horizontal-navigation {
                 }
 
                 .fuse-horizontal-navigation-item-icon {
-                    @apply text-primary #{'!important'};
+                    @apply text-green-900 #{'!important'};
                 }
             }
         }
@@ -105,7 +106,7 @@ fuse-horizontal-navigation {
         .fuse-horizontal-navigation-item-active,
         .fuse-horizontal-navigation-item-active-forced {
             .fuse-horizontal-navigation-item-title {
-                @apply text-primary #{'!important'};
+                @apply text-green-900 #{'!important'};
             }
 
             .fuse-horizontal-navigation-item-subtitle {
@@ -117,7 +118,7 @@ fuse-horizontal-navigation {
             }
 
             .fuse-horizontal-navigation-item-icon {
-                @apply text-primary #{'!important'};
+                @apply text-green-900 #{'!important'};
             }
         }
     }
